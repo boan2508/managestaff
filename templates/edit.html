@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block title %} Edit Page {% endblock %} {% block content %}
+
+<form action="{{ request.path }}" method="POST">
+    <h1 class="nav-link">This is edit staff</h1>
+    <div class="col-md-3">
+        <label for="Name">Name</label><br>
+        <input type="text" class="form-control" name="Name" placeholder="Name" /><br>
+
+        <label for="PhoneNumber">PhoneNumber</label><br>
+        <input type="text" class="form-control" name="PhoneNumber" placeholder="PhoneNumber" /><br>
+
+        <label for="Dob">Dob</label><br>
+        <input type="text" class="form-control" name="Dob" placeholder="Day of birth" /><br>
+
+        <label for="DoJoin">DoJoin</label><br>
+        <input type="text" class="form-control" name="DoJoin" placeholder="Day of join" /><br>
+
+        <label for="Email">Email</label><br>
+        <input type="text" class="form-control" name="Email" placeholder="ex:nguyenvana" /><br>
+
+        <a><button type="submit" class="btn btn-success">Save</button></a>
+        <a class="nav-link" href="{{ url_for('manage_page') }}"><button type="button" class="btn btn-success">Back to list</button></a>
+    </div>
+</form>{% endblock %}
